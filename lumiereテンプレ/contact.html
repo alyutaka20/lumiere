@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CONTACT | LUMIÈRE</title>
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- お問い合わせページ専用CSS -->
+  <link rel="stylesheet" href="css/contact.css">
+
+  
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+
+    <!-- ロゴ：クリックするとトップページへ戻る -->
+    <a href="index.html" class="site-logo">
+      LUMIÈRE
+    </a>
+
+    <!-- グローバルナビゲーション -->
+    <nav class="global-nav" aria-label="メインナビゲーション">
+      <ul>
+        <li><a href="index.html#home">HOME</a></li>
+        <li><a href="index.html#concept">CONCEPT</a></li>
+        <li><a href="index.html#menu">MENU</a></li>
+        <li><a href="index.html#access">ACCESS</a></li>
+      </ul>
+    </nav>
+
+    <!-- 予約ボタン -->
+    <a href="contact.html" class="header-contact">
+      RESERVATION
+    </a>
+
+  </header>
+  <!-- メインコンテンツ -->
+<main>
+  <div>
+
+    <!-- ページタイトル -->
+    <section class="contact-heading">
+
+      <p class="section-subtitle">RESERVATION</p>
+
+      <h1 class="section-title">CONTACT</h1>
+
+      <p class="contact-description">
+        ご予約・お問い合わせはこちらからお願いいたします。
+      </p>
+
+    </section>
+
+    <section class="contact-form-section">
+
+      <div class="contact-form-inner">
+
+        <h2 class="contact-form-title">
+          お問い合わせフォーム
+        </h2>
+
+        <p class="contact-form-description">
+          必要事項をご入力のうえ、送信してください。
+        </p>
+
+      </div>
+
+  <!-- 入力フォーム -->
+  <form class="contact-form" action="send.php" method="POST" novalidate>
+
+    <!-- お名前 -->
+    <div class="form-group">
+      <label for="your-name">お名前 <span>必須</span></label>
+        <input
+        type="text"
+        id="your-name"
+        name="your-name"
+        placeholder="例：山田 花子"
+        required
+        >
+    </div>
+
+    <!-- メールアドレス -->
+    <div class="form-group">
+      <label for="your-email">メールアドレス <span>必須</span></label>
+      <input
+        type="email"
+        id="your-email"
+        name="your-email"
+        placeholder="例：example@email.com"
+        required
+      >
+    </div>
+
+    <!-- 電話番号 -->
+    <div class="form-group">
+      <label for="your-tel">電話番号</label>
+      <input
+        type="tel"
+        id="your-tel"
+        name="your-tel"
+        placeholder="例：09012345678"
+      >
+    </div>
+
+              <!-- ご希望メニュー -->
+    <div class="form-group">
+      <label for="your-menu">ご希望メニュー <span>必須</span></label>
+
+      <select id="your-menu" name="your-menu" required>
+        <option value="">メニューを選択してください</option>
+        <option value="フェイシャルケア">フェイシャルケア</option>
+        <option value="毛穴・角質ケア">毛穴・角質ケア</option>
+        <option value="リラクゼーション">リラクゼーション</option>
+        <option value="その他">その他</option>
+      </select>
+    </div>
+
+    <!-- ご希望日時 -->
+    <div class="form-group">
+      <label for="your-date">ご希望日時 <span>必須</span></label>
+
+      <input
+        type="datetime-local"
+        id="your-date"
+        name="your-date"
+        required
+      >
+    </div>
+
+    <!-- お問い合わせ内容 -->
+    <div class="form-group">
+      <label for="your-message">お問い合わせ内容</label>
+
+      <textarea
+        id="your-message"
+        name="your-message"
+        rows="6"
+        placeholder="ご質問やご要望などをご入力ください。"
+      ></textarea>
+    </div>
+
+    <!-- 送信ボタン -->
+    <div class="form-submit">
+      <button type="submit">
+        SEND MESSAGE
+      </button>
+    </div>
+
+  </form>
+
+  </section>
+
+</div>
+
+</main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+
+    <!-- ロゴ -->
+    <p class="footer-logo">LUMIÈRE</p>
+
+    <!-- フッターナビゲーション -->
+    <nav class="footer-nav" aria-label="フッターナビゲーション">
+      <a href="index.html#home">HOME</a>
+      <a href="index.html#concept">CONCEPT</a>
+      <a href="index.html#menu">MENU</a>
+      <a href="index.html#access">ACCESS</a>
+    </nav>
+
+    <!-- コピーライト -->
+    <p class="copyright">
+      &copy; 2026 LUMIÈRE All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
