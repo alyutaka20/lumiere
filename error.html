@@ -1,0 +1,91 @@
+<?php
+// =================================
+// エラーメッセージを受け取る
+// =================================
+
+// URLから渡されたエラー内容を受け取る
+$error = $_GET["error"] ?? "";
+
+// 表示する文章を決める
+$error_message = "入力内容を確認してください。";
+
+if ($error === "name") {
+  $error_message = "お名前を入力してください。";
+
+} elseif ($error === "email") {
+  $error_message = "メールアドレスを正しく入力してください。";
+
+} elseif ($error === "menu") {
+  $error_message = "ご希望メニューを選択してください。";
+
+} elseif ($error === "date") {
+  $error_message = "ご希望日時を入力してください。";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERROR | LUMIÈRE</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/error.css">
+</head>
+
+<body>
+
+  <!-- 共通ヘッダー -->
+  <header class="site-header">
+    <a href="index.html" class="site-logo">LUMIÈRE</a>
+
+    <nav class="global-nav" aria-label="メインナビゲーション">
+      <ul>
+        <li><a href="index.html#home">TOP</a></li>
+        <li><a href="index.html#concept">CONCEPT</a></li>
+        <li><a href="index.html#menu">MENU</a></li>
+        <li><a href="index.html#access">ACCESS</a></li>
+      </ul>
+    </nav>
+
+    <a href="contact.html" class="header-contact">RESERVATION</a>
+  </header>
+
+  <!-- エラー表示 -->
+  <main class="error-main">
+    <section class="error-content">
+
+      <p class="error-subtitle">PLEASE CHECK</p>
+
+      <h1 class="error-title">入力内容をご確認ください</h1>
+
+      <p class="error-text">
+        <?php echo htmlspecialchars($error_message, ENT_QUOTES, "UTF-8"); ?>
+      </p>
+
+      <a href="contact.html" class="error-button">
+        BACK TO CONTACT
+      </a>
+
+    </section>
+  </main>
+
+  <!-- 共通フッター -->
+  <footer class="site-footer">
+    <p class="footer-logo">LUMIÈRE</p>
+
+    <nav class="footer-nav" aria-label="フッターナビゲーション">
+      <a href="index.html#home">HOME</a>
+      <a href="index.html#concept">CONCEPT</a>
+      <a href="index.html#menu">MENU</a>
+      <a href="index.html#access">ACCESS</a>
+    </nav>
+
+    <p class="copyright">
+      &copy; 2026 LUMIÈRE All Rights Reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
